@@ -1,4 +1,4 @@
-package appointmensystem
+package appointmentsystem
 
 class UrlMappings {
 
