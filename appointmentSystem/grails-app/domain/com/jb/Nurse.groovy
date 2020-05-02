@@ -7,6 +7,12 @@ class Nurse {
     String nurseEmail
     int nurseOffice
     int nursePhone
+
     static constraints = {
+    nurseName size: 2..30, blank: false
+    qualifications blank: false
+    nurseEmail email: true, blank: false
+    nurseOffice size: 2..20, blank: false
+    nursePhone size: 7..15, blank: false
     }
 }

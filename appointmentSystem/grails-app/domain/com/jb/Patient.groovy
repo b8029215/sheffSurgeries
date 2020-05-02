@@ -6,9 +6,16 @@ class Patient {
     String patientResidence
     Date patientDob
     int patientID
-    String description
     Date dateRegistered
     int patientPhone
+
     static constraints = {
+    patientName size: 2..30, blank: false
+    patientAddress size: 2..100, blank: false
+    patientResidence size: 2..100, blank: false
+    patientDob blank: false
+    patientID size: 2..5, blank: false
+    dateRegistered blank: false
+    patientPhone size: 7..15, blank: false
     }
 }
