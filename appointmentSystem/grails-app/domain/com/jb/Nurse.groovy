@@ -5,7 +5,7 @@ class Nurse {
     String nurseName
     String qualifications
     String nurseEmail
-    int nurseOffice
+    String nurseOffice
     int nursePhone
 
     static constraints = {

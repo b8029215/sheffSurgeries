@@ -7,7 +7,7 @@ class Patient {
     Date patientDob
     int patientID
     Date dateRegistered
-    int patientPhone
+    String patientPhone
 
     static constraints = {
     patientName size: 2..30, blank: false

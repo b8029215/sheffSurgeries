@@ -11,7 +11,7 @@ class Prescription {
 
     static constraints = {
     pharmacyName size: 2..30, blank: false
-    pharmacyNumber size: 2..8, blank: false
+    prescripNumber size: 1..8, blank: false
     medicine size: 2..60, blank: false
     totalCost size: 2..7, blank: false
     dateIssued blank: false 
