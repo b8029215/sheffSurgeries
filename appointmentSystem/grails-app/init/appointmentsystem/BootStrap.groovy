@@ -41,6 +41,18 @@ class BootStrap {
                 doctorPhone: '01111777',
                 bio: "Placeholder").save()
 
+   def appointment1=new Appointment(
+                appDate: '2021-04-13',
+                appTime: '3:00pm',
+                appDuration: '30,45,60',
+                roomNumber: 'D-3233' ).save()
+
+   def appointment2=new Appointment(
+                appDate: '2020-02-11',
+                appTime: '5:45pm',
+                appDuration: '30,45',
+                roomNumber: 'D-3423' ).save()
+
    def patient1=new Patient(
                 patientName: 'Tom Rivers',
                 patientAddress: '2 One Way Street, Eckington',
@@ -48,7 +60,8 @@ class BootStrap {
                 patientDob: '1998-05-20',
                 patientID: 'D-32',
                 dateRegistered: '2018-09-26',
-                patientPhone: '0114222444').save()
+                patientPhone: '0114222444',
+                appointment:appointment1).save()
 
    def patient2=new Patient(
                 patientName: 'Hannah Thomas',
@@ -57,7 +70,8 @@ class BootStrap {
                 patientDob: '1989-03-30',
                 patientID: 'P-12',
                 dateRegistered: '2019-11-16',
-                patientPhone: '0114222564').save()
+                patientPhone: '0114222564',
+                appointment:appointment2).save()
 
    def receptionist1=new Receptionist(
                 recepName: 'Rob Kingston',
@@ -87,18 +101,6 @@ class BootStrap {
                  nurseOffice: 'A-2325',
                  nursePhone: '01142224428').save()
 
-   def appointment1=new Appointment(
-                appDate: '2021-04-13',
-                appTime: '3:00pm',
-                appDuration: '30,45,60',
-                roomNumber: 'D-3233' ).save()
-
-   def appointment2=new Appointment(
-                appDate: '2020-02-11',
-                appTime: '5:45pm',
-                appDuration: '30,45',
-                roomNumber: 'D-3423' ).save()
-
    def prescription1=new Prescription(
                 pharmacyName: 'City Health Centre',
                 prescripNumber: '21',
@@ -126,24 +128,39 @@ doctor2.addToSurgery(surgery1)
 doctor2.addToSurgery(surgery2)
 
 doctor1.addToAppointment(appointment1)
-doctor2.addToAppointment(appointment2)
-doctor1.addToAppointment(appointment1)
+doctor1.addToAppointment(appointment2)
+doctor2.addToAppointment(appointment1)
 doctor2.addToAppointment(appointment2)
 
 surgery1.addToReceptionist(receptionist1)
-surgery2.addToReceptionist(receptionist2)
-surgery1.addToReceptionist(receptionist1)
+surgery1.addToReceptionist(receptionist2)
+surgery2.addToReceptionist(receptionist1)
 surgery2.addToReceptionist(receptionist2)
 
 surgery1.addToNurse(nurse1)
-surgery2.addToNurse(nurse2)
-surgery1.addToNurse(nurse1)
+surgery1.addToNurse(nurse2)
+surgery2.addToNurse(nurse1)
 surgery2.addToNurse(nurse2)
 
 patient1.addToPrescription(prescription1)
+patient1.addToPrescription(prescription2)
+patient2.addToPrescription(prescription1)
 patient2.addToPrescription(prescription2)
-patient1.addToPrescription(prescription1)
-patient2.addToPrescription(rescription2)
+
+doctor1.addToNurse(nurse1)
+doctor1.addToNurse(nurse2)
+doctor1.addToNurse(nurse1)
+doctor2.addToNurse(nurse2)
+
+doctor1.addToPatient(patient1)
+doctor1.addToPatient(patient2)
+doctor2.addToPatient(patient1)
+doctor2.addToPatient(patient2)
+
+patient1.addToSurgery(surgery1)
+patient1.addToSurgery(surgery2)
+patient2.addToSurgery(surgery1)
+patient2.addToSurgery(surgery2)
 
 }
 def destroy = {

@@ -9,7 +9,8 @@ class Surgery {
     String description
     String openingTime
 
-    static hasMany=[receptionist:Receptionist, nurse:Nurse]
+    static hasMany=[receptionist:Receptionist, nurse:Nurse, patient:Patient]
+    static tobelongsTo=[Patient]
 
 
     static constraints = {

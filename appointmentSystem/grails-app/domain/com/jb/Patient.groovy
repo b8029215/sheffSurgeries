@@ -8,8 +8,14 @@ class Patient {
     String patientID
     Date dateRegistered
     String patientPhone
+    Appointment appointment
 
-    static hasMany=[prescription:Prescription]
+    static hasMany=[prescription:Prescription, doctor:Doctor, surgery:Surgery]
+    static tobelongsTo=[Doctor]
+
+    String toString(){
+    return appointment
+}
 
     static constraints = {
     patientName size: 2..30, blank: false

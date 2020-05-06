@@ -10,7 +10,7 @@ class Doctor {
     String doctorPhone
     String bio
 
-    static hasMany=[prescription:Prescription, surgery:Surgery, appointment:Appointment]
+    static hasMany=[prescription:Prescription, surgery:Surgery, appointment:Appointment, nurse:Nurse, patient:Patient]
 
     static constraints = {
     fullname size: 2..30, blank: false
