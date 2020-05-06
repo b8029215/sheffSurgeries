@@ -9,9 +9,8 @@ class Surgery {
     String description
     String openingTime
 
-String toString(){
-        return name
-}
+    static hasMany=[receptionist:Receptionist, nurse:Nurse]
+
 
     static constraints = {
     name size: 2..30, blank: false

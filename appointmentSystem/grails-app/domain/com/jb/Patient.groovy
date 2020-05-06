@@ -9,6 +9,8 @@ class Patient {
     Date dateRegistered
     String patientPhone
 
+    static hasMany=[prescription:Prescription]
+
     static constraints = {
     patientName size: 2..30, blank: false
     patientAddress size: 2..100, blank: false

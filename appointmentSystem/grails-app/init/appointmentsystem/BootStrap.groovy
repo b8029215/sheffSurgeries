@@ -115,6 +115,36 @@ class BootStrap {
                 dateIssued: '2021-12-17', 
                 patientPaying: 'no').save()
 
+doctor1.addToPrescription(prescription1)
+doctor1.addToPrescription(prescription2)
+doctor2.addToPrescription(prescription1)
+doctor2.addToPrescription(prescription2)
+
+doctor1.addToSurgery(surgery1)
+doctor1.addToSurgery(surgery2)
+doctor2.addToSurgery(surgery1)
+doctor2.addToSurgery(surgery2)
+
+doctor1.addToAppointment(appointment1)
+doctor2.addToAppointment(appointment2)
+doctor1.addToAppointment(appointment1)
+doctor2.addToAppointment(appointment2)
+
+surgery1.addToReceptionist(receptionist1)
+surgery2.addToReceptionist(receptionist2)
+surgery1.addToReceptionist(receptionist1)
+surgery2.addToReceptionist(receptionist2)
+
+surgery1.addToNurse(nurse1)
+surgery2.addToNurse(nurse2)
+surgery1.addToNurse(nurse1)
+surgery2.addToNurse(nurse2)
+
+patient1.addToPrescription(prescription1)
+patient2.addToPrescription(prescription2)
+patient1.addToPrescription(prescription1)
+patient2.addToPrescription(rescription2)
+
 }
 def destroy = {
 }
