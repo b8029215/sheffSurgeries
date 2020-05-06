@@ -20,7 +20,7 @@ class Doctor {
     password size: 6..30, blank: false
     doctorOffice size: 1..10, blank: false
     doctorPhone size: 7..15, blank: false
-    bio blank: false
+    bio widget: 'textarea', blank: false
     }
 
 }

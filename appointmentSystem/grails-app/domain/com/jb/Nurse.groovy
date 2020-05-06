@@ -6,10 +6,10 @@ class Nurse {
     String qualifications
     String nurseEmail
     String nurseOffice
-    int nursePhone
+    String nursePhone
 
     static hasMany=[doctor:Doctor]
-    static tobelongsTo=[Doctor]
+    static belongsTo=[Doctor]
 
     static constraints = {
     nurseName size: 2..30, blank: false
