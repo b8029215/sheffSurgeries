@@ -11,7 +11,7 @@ class Receptionist {
     static constraints = { 
     recepName size: 2..30, blank: false
     recepEmail email: true, blank: false
-    recepUsername size: 6..30, blank: false
+    recepUsername size: 4..30, blank: false
     recepPassword size: 6..30, blank: false
     recepPhone size: 7..15, blank: false
     }

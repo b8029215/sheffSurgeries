@@ -9,6 +9,10 @@ class Surgery {
     String description
     String openingTime
 
+String toString(){
+        return name
+}
+
     static constraints = {
     name size: 2..30, blank: false
     address size: 5..75, blank: false

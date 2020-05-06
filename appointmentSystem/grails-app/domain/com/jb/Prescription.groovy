@@ -7,7 +7,7 @@ class Prescription {
     String medicine
     String totalCost
     Date dateIssued
-    String patientPaying
+    Boolean patientPaying
 
     static constraints = {
     pharmacyName size: 2..30, blank: false
